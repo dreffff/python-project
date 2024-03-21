@@ -1,11 +1,13 @@
 from random_answer import answer
+from calculator import calc
 
 def main():
     while True:
         which_tools = input("""
 List tools:
 1. Random answer
-2. Exit tools
+2. Calculator
+3. Exit tools
 
 Which tool you want use? """)
 
@@ -17,7 +19,10 @@ Which tool you want use? """)
                     ulangi = input("Ulangi (Y/n)? \n")
                     if ulangi == "n":
                         break
-            case "2" or '':
+            case "2":
+                calc()
+
+            case "3":
                 print(log_exit)
                 break  # Exit the main loop here
             case '':
