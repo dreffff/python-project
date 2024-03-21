@@ -1,31 +1,23 @@
 def calc():
-    ask = input("Operasi apa yang ingin digunakan?")
-    operation = ["+", "-", "*", "/"]
+    ask = input("Operasi apa yang ingin digunakan (+, *)? ")
+    operation = ["+", "*"]
     match ask:
         case "+":
-            angka = int(input("berapa banyak angka yang ingin di jumlahkan?")) 
+            angka = int(input("\nberapa banyak angka yang ingin dijumlahkan? ")) 
             awal = 1
+            nominal_awal = 0
             while awal <= angka:
-                print("masukkan angka: ")
+                nominal = int(input("masukkan angka: "))
+                nominal_awal += nominal
                 awal = awal + 1
-
-        case "-":
-            angka = int(input("berapa banyak angka yang ingin di jumlahkan?")) 
-            awal = 1
-            while awal <= angka:
-                print("masukkan angka: ")
-                awal = awal + 1
+            print(f"\nHasilnya adalah {nominal_awal}")
 
         case "*":
-            angka = int(input("berapa banyak angka yang ingin di jumlahkan?")) 
+            angka = int(input("berapa banyak angka yang ingin dikalikan?")) 
             awal = 1
+            nominal_awal = 0
             while awal <= angka:
-                print("masukkan angka: ")
+                nominal = int(input("masukkan angka: "))
+                nominal_awal *= nominal
                 awal = awal + 1
-
-        case "/":
-            angka = int(input("berapa banyak angka yang ingin di jumlahkan?")) 
-            awal = 1
-            while awal <= angka:
-                print("masukkan angka: ")
-                awal = awal + 1
+            print(f"\nHasilnya adalah {nominal_awal}")
